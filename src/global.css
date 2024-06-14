@@ -1,0 +1,8 @@
+:root {
+    --mainColor: #15023a;
+    --width: 768px;
+}
+
+@media (max-width: var(--width)) {
+    /* Your content here */
+}
