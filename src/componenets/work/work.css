@@ -121,3 +121,18 @@
     }
   }
 }
+.works {
+  background-color: brown;
+  display: flex;
+  flex-direction: column; /* Use column layout to stack elements */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px; /* Optional: Add some padding at the top */
+}
+
+.title {
+  color: white; /* Set text color to white */
+  font-size: 36px; /* Set font size for the title */
+  margin-bottom: 20px; /* Space between title and slider */
+}

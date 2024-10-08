@@ -49,7 +49,9 @@ export default function Works() {
           <div className="container">
             <div className="item">
               <div className="left">
+              <h2 className="title">Works</h2>
                 <div className="leftContainer">
+                
                   <div className="imgContainer">
                     <img src={d.icon} alt="" />
                   </div>

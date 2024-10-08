@@ -7,8 +7,9 @@ function TopBar({ menuOpen, setMenuOpen }) {
     <div className={"topbar " + (menuOpen && "active")}>
         <div className="wrapper">
           <div className="left">
-          <a href='intro' className='logo'><FaHome /> </a> 
-            <div className="itemContainer">
+          <a href='intro' className='logo'><FaHome /> </a>
+         <div className='items'>
+         <div className="itemContainer">
             <FaSquarePhone className='icon'/>
             <span>+251-922-100-181</span>
             </div>
@@ -16,6 +17,8 @@ function TopBar({ menuOpen, setMenuOpen }) {
           <IoMdMail  className='icon'/>
             <span>Ashenafibirhanu33@gmail.com</span>
           </div>
+         </div>
+           
            </div>
           
           <div className="right">

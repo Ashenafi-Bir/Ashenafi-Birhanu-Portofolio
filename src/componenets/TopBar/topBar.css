@@ -1,81 +1,112 @@
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: brown;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
 
-.topbar{
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    color: brown;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    transition: all 1s ease;
-    .wrapper{
-        padding: 10px 30px;
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 20px;
+      }
+
+      /* New 'items' container */
+      .items {
         display: flex;
+        flex-direction: row; /* Default for larger screens */
         align-items: center;
-        justify-content: space-between;
-       .left{
-        display: flex;
-        align-items: center;
-           .logo{
-            font-size: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            color: inherit;
-            margin-right:20px ;
-           }
-           .itemContainer{
-            display: flex;
-            align-items: center;
-            @media (max-width:768px) {
-              display: none;
+
+        .itemContainer {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            font-size: 20px;
+            margin-right: 10px;
+            margin-left: 20px;
           }
-            .icon{ 
-                font-size: 20px;
-                margin-right: 10px;
-                margin-left: 20px;
-            }
-            span{
-                font-size: 15px;
-                font-weight: 300;
-                   }
-                }
-        }
-      .right{
-           .hamburger{
-            width: 32px;
-            height: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
-            span{
-                width: 100%;
-                height: 3px;
-                background-color: brown;
-                transform-origin: left;
-                transition: all 2s ease;
-            }
-           }
-        }
-    }
-    &.active {
-        background-color: brown;
-        color: white;
-    
-        .hamburger {
+
           span {
-            &:first-child {
-              background-color: white;
-              transform: rotate(45deg);
+            font-size: 15px;
+            font-weight: 300;
+          }
+        }
+
+        /* Media query for screens smaller than 768px */
+        @media (max-width: 768px) {
+          flex-direction: column; /* Stack items vertically */
+          align-items: flex-start; /* Align all items to the start */
+          
+          .itemContainer {
+            margin-bottom: 5px; /* Add some spacing between items */
+
+            .icon {
+              font-size: 16px; /* Reduce icon size */
+              margin-left: 0; /* Adjust margin to fit better */
             }
-            &:nth-child(2) {
-              opacity: 0;
-            }
-            &:last-child {
-              background-color: white;
-              transform: rotate(-45deg);
+
+            span {
+              font-size: 12px; /* Reduce text size */
             }
           }
         }
       }
+    }
+
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: brown;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: brown;
+    color: white;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
 }

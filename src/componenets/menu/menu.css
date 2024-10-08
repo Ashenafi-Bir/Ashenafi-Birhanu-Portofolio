@@ -1,26 +1,28 @@
 .menu {
-  width: 300px;
-  height: 100vh;
-  background-color: brown;
-  position: fixed;
-  top: 0;
-  right: -300px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all 1s ease;
+    width: 300px;
+    height: 100vh;
+    background-color: brown;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    transition: all 1s ease;
+    padding-top: 100px; /* Optional: Add some padding at the top */
 
-  @media (max-width: 768px) { /* Corrected media query */
+  
+    @media (max-width: 768px) {
       width: 200px;
-  }
-
-  &.active {
+    }
+  
+    &.active {
       right: 0;
-  }
-
-  ul {
+    }
+  
+    ul {
       margin: 0;
       padding: 0;
       list-style: none;
@@ -28,24 +30,25 @@
       font-weight: 300;
       color: white;
       width: 60%;
-
-      @media (max-width: 768px) { /* Corrected media query */
-          font-size: 20px;
+  
+      @media (max-width: 768px) {
+        font-size: 20px;
       }
-
+  
       li {
-          margin-bottom: 20px;
-
-          a {
-              font-size: inherit;
-              color: inherit;
-              text-decoration: none;
-          }
-
-          &:hover {
-              font-weight: 500;
-              color: rgb(255, 255, 255);
-          }
+        margin-bottom: 20px;
+  
+        a {
+          font-size: inherit;
+          color: inherit;
+          text-decoration: none;
+        }
+  
+        &:hover {
+          font-weight: 500;
+          color: rgb(255, 255, 255);
+        }
       }
+    }
   }
-}
+  
